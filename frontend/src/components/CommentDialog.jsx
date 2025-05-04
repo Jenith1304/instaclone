@@ -31,7 +31,7 @@ const CommentDialog = ({ open, setOpen }) => {
     }
     const sendMessageHandler = async () => {
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/post/${selectedPost?._id}/comment`, { text }, { headers: { 'Content-type': 'application/json' }, withCredentials: true });
+            const res = await axios.post(`https://instaclone-j434.onrender.com/api/v1/post/${selectedPost?._id}/comment`, { text }, { headers: { 'Content-type': 'application/json' }, withCredentials: true });
             if (res.data.success) {
                 const updatedCommentData = [...comment, res.data.comment];
                 setComment(updatedCommentData);

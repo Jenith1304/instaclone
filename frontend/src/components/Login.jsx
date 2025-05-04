@@ -25,7 +25,7 @@ function Login() {
         e.preventDefault();
         try {
             setLoading(true)
-            const res = await axios.post("http://localhost:8000/api/v1/user/login", input, { headers: { 'Content-Type': 'application/json' }, withCredentials: true })
+            const res = await axios.post("https://instaclone-j434.onrender.com/api/v1/user/login", input, { headers: { 'Content-Type': 'application/json' }, withCredentials: true })
             if (res.data.success) {
                 dispatch(setAuthUser(res.data.user))
                 navigate('/')

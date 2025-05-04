@@ -38,7 +38,7 @@ const LeftSidebar = () => {
     const logOutHandler = async () => {
         try {
             console.log("Clikced")
-            const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true });
+            const res = await axios.get('https://instaclone-j434.onrender.com/api/v1/user/logout', { withCredentials: true });
             if (res.data.success) {
                 dispatch(setAuthUser(null))
                 dispatch(setSelectedPost(null))
